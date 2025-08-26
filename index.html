@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F172A">
+<title>SMK Perintis 1 Depok</title>
+<meta name="description" content="Website resmi SMK Perintis 1 Depok — informatif, modern, dan responsif.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
+        colors: {
+          primary: { DEFAULT:'#0F172A' },
+          accent: { DEFAULT:'#FFD700' }
+        }
+      }
+    },
+    darkMode: 'class'
+  }
+</script>
+<style>
+  .btn{transition:transform .08s ease, box-shadow .2s ease;position:relative;overflow:hidden}
+  .btn:active{transform:translateY(1px) scale(.99)}
+  .reveal{opacity:0;transform:translateY(16px);transition:all .6s ease}
+  .reveal.show{opacity:1;transform:translateY(0)}
+  .ripple{position:relative;overflow:hidden}
+  .ripple::after{content:'';position:absolute;border-radius:9999px;transform:scale(0);background:rgba(255,255,255,.35);width:10px;height:10px;opacity:0;pointer-events:none;animation:none}
+  .ripple:active::after{animation:ripple .6s ease-out}
+  @keyframes ripple{from{opacity:.6;transform:translate(var(--x),var(--y)) scale(0)}to{opacity:0;transform:translate(var(--x),var(--y)) scale(30)}}
+  .blur-bg{backdrop-filter:blur(10px);background:rgba(15,23,42,.65)}
+  .card{transition:transform .2s ease, box-shadow .3s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(2,6,23,.15)}
+</style>
+</head>
+<body class="bg-white text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-100">
+<header id="navbar" class="fixed inset-x-0 top-0 z-50">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mt-4"></div>
+    <nav class="blur-bg rounded-2xl border border-white/10 px-4 py-2">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Logo SMK Perintis 1 Depok" class="h-10 w-10 rounded-lg ring-2 ring-white/20 object-contain bg-white p-1">
+          <div class="leading-tight">
+            <div class="font-extrabold tracking-tight">SMK Perintis 1 Depok</div>
+            <div class="text-xs text-slate-300">Jl. Siliwangi No. 39, Pancoran Mas</div>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="profil.html">Profil</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="sejarah.html">Sejarah</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="sambutan.html">Sambutan</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="jurusan.html">Jurusan</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="spmb.html">SPMB</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="berita.html">Berita</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="agenda.html">Agenda</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="galeri.html">Galeri</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="lokasi.html">Lokasi</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="kontak.html">Kontak</a>
+          <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="admin.html">Admin</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="btn ripple rounded-xl px-3 py-2 bg-white/10 hover:bg-white/20">🌓</button>
+          <button id="menuBtn" class="lg:hidden btn ripple rounded-xl px-3 py-2 bg-white/10 hover:bg-white/20">☰</button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="lg:hidden hidden mt-3 grid grid-cols-2 gap-2">
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="profil.html">Profil</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="sejarah.html">Sejarah</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="sambutan.html">Sambutan</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="jurusan.html">Jurusan</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="spmb.html">SPMB</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="berita.html">Berita</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="agenda.html">Agenda</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="galeri.html">Galeri</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="lokasi.html">Lokasi</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="kontak.html">Kontak</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-white/10" href="admin.html">Admin</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="h-28"></div>
+
+<main>
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-6">
+    <div class="relative overflow-hidden rounded-3xl ring-1 ring-slate-200/30 dark:ring-white/10">
+      <div id="slider" class="relative h-[340px] sm:h-[420px] lg:h-[520px]">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1527254059249-c9b63644a8df?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-0"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-slate-900/10"></div>
+        <div class="relative z-10 p-6 sm:p-10 lg:p-14 text-white max-w-2xl">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs ring-1 ring-white/20 mb-3">
+            <span>Akreditasi A</span><span>•</span><span>SPMB 2025/2026</span><span>•</span><span>Link & Match Industri</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">SMK Modern, Informatif, dan Terintegrasi</h1>
+          <p class="mt-3 text-sm sm:text-base text-white/90">Tiga program keahlian unggulan, proyek riil, dan dukungan karier. Bergabung bersama kami.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="spmb.html" class="btn ripple bg-yellow-400 text-slate-900 px-5 py-3 rounded-xl font-semibold">Daftar SPMB</a>
+            <a href="jurusan.html" class="btn ripple bg-white/10 px-5 py-3 rounded-xl">Lihat Jurusan</a>
+            <a href="profil.html" class="btn ripple bg-white/10 px-5 py-3 rounded-xl">Profil Sekolah</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 grid md:grid-cols-4 gap-6">
+    <div class="card rounded-2xl border border-slate-200/50 dark:border-white/10 p-6 reveal">
+      <div class="text-3xl">🎓</div>
+      <h3 class="mt-2 font-bold text-lg">Program Keahlian</h3>
+      <p class="text-sm mt-1">BDP, OTKP, AKL dengan kurikulum berbasis proyek dan sertifikasi.</p>
+    </div>
+    <div class="card rounded-2xl border border-slate-200/50 dark:border-white/10 p-6 reveal">
+      <div class="text-3xl">💼</div>
+      <h3 class="mt-2 font-bold text-lg">Mitra Industri</h3>
+      <p class="text-sm mt-1">Magang, kunjungan, dan kelas tamu menyiapkan siswa siap kerja.</p>
+    </div>
+    <div class="card rounded-2xl border border-slate-200/50 dark:border-white/10 p-6 reveal">
+      <div class="text-3xl">🏫</div>
+      <h3 class="mt-2 font-bold text-lg">Fasilitas Lengkap</h3>
+      <p class="text-sm mt-1">Lab komputer, akuntansi, perkantoran, perpustakaan, dan internet stabil.</p>
+    </div>
+    <div class="card rounded-2xl border border-slate-200/50 dark:border-white/10 p-6 reveal">
+      <div class="text-3xl">🏅</div>
+      <h3 class="mt-2 font-bold text-lg">Prestasi & Ekskul</h3>
+      <p class="text-sm mt-1">Ragam ekskul & prestasi tingkat kota/provinsi.</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-14 grid lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2">
+      <h2 class="font-extrabold text-2xl">Berita Terbaru</h2>
+      <div id="newsList" class="mt-4 grid sm:grid-cols-2 gap-4"></div>
+      <div class="mt-4"><a class="hover:underline" href="berita.html">Lihat semua berita →</a></div>
+    </div>
+    <div>
+      <h2 class="font-extrabold text-2xl">Agenda</h2>
+      <ul id="agendaList" class="mt-4 space-y-3"></ul>
+      <div class="mt-4"><a class="hover:underline" href="agenda.html">Lihat agenda lengkap →</a></div>
+    </div>
+  </section>
+</main>
+
+  <footer class="mt-20 border-t border-slate-200/20 bg-slate-50/50 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="font-extrabold text-lg">SMK Perintis 1 Depok</div>
+        <p class="text-sm mt-2">Jl. Siliwangi No. 39, Pancoran Mas, Depok 16431</p>
+        <p class="text-sm">Telp: (021) 7773543</p>
+        <p class="text-sm">Email: smk1perdep39@yahoo.co.id</p>
+      </div>
+      <div>
+        <div class="font-semibold">Media Sosial</div>
+        <ul class="mt-2 space-y-1">
+          <li><a class="hover:underline" href="https://www.instagram.com/official_smkperintis1depok/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a class="hover:underline" href="https://youtube.com/@docsmkperintis1depok" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a class="hover:underline" href="https://www.facebook.com/groups/1663550377209227/" target="_blank" rel="noopener">Facebook Group</a></li>
+          <li><a class="hover:underline" href="https://wa.me/6281282460257?text=Halo%20Admin%20SMK%20Perintis%201%20Depok%2C%20saya%20ingin%20bertanya%20tentang%20SPMB." target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Navigasi</div>
+        <div class="mt-2 grid grid-cols-2 gap-2 text-sm">
+          <a class="hover:underline" href="spmb.html">SPMB</a>
+          <a class="hover:underline" href="berita.html">Berita</a>
+          <a class="hover:underline" href="agenda.html">Agenda</a>
+          <a class="hover:underline" href="galeri.html">Galeri</a>
+          <a class="hover:underline" href="lokasi.html">Lokasi</a>
+          <a class="hover:underline" href="kontak.html">Kontak</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-xs py-4 border-t border-slate-200/10">
+      © 2025 SMK Perintis 1 Depok — All rights reserved.
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281282460257?text=Halo%20Admin%20SMK%20Perintis%201%20Depok%2C%20saya%20ingin%20mendaftar%20SPMB." target="_blank" rel="noopener"
+     class="fixed bottom-6 right-6 p-4 rounded-full shadow-lg bg-green-500 text-white hover:scale-105 transition">☎</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
