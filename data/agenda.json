@@ -1,1 +1,23 @@
-
+[
+  {
+    "title": "Sosialisasi SPMB & Tur Kampus",
+    "date": "2025-09-06",
+    "time": "08.00–12.00 WIB",
+    "place": "Aula SMK Perintis 1 Depok",
+    "desc": "Penjelasan prosedur SPMB, beasiswa, dan tur fasilitas."
+  },
+  {
+    "title": "UKK/Praktik Kejuruan",
+    "date": "2026-02-10",
+    "time": "07.00–15.30 WIB",
+    "place": "Laboratorium & Ruang Praktik",
+    "desc": "Uji kompetensi sesuai skema masing-masing program keahlian."
+  },
+  {
+    "title": "Kunjungan Industri",
+    "date": "2025-11-22",
+    "time": "Sehari penuh",
+    "place": "Mitra Industri",
+    "desc": "Pengenalan proses bisnis dan budaya kerja."
+  }
+]
